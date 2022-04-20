@@ -1,1 +1,38 @@
-// Código de Nav acá
+
+nav {
+    // display: flex; 
+    // flex-direction: column; 
+    // align-items: center;
+    .flex (@direction: column, @align: center); // mixin reemplaza las 3 lineas de arriba
+    background: #f4f4f4;
+    margin-bottom: 5px;
+
+    h2 {
+        padding-top: 15px;
+    }
+
+    ul {
+        // display: flex;
+        // justify-content: space-around;
+        .flex (row, space-around, center);
+        width: 35%;
+        padding: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: @river-bend;
+        font-size: 1.6rem;
+        transition: background-color .5s;
+        padding: 5px;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+
+    a:hover {
+        background-color: @river-bend;
+        color: #d4d5d8
+
+    }
+    
+}
