@@ -35,3 +35,44 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+
+
+
+.pestañas { //agregué yo para estilo de pestañas html
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: @nav-bg;
+    border-bottom: 2px solid @nav-border;
+    
+    h2 {
+        margin: 2rem 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        
+      a {
+          text-decoration: none;
+          color: @river-bend;
+          font-size: 1.6rem;
+          transition: background-color .5s;
+          padding: 5px;
+          border-radius: 5px;
+          white-space: nowrap;
+          &:hover {
+            background-color: @river-bend;
+            color: #d4d5d8
+
+          }
+      }
+    } 
+  } 
+}
+

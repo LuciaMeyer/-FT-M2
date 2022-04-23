@@ -1,38 +1,43 @@
-
+// Código de Nav acá
 nav {
-    // display: flex; 
-    // flex-direction: column; 
+    // display: flex;
+    // flex-direction: column;
     // align-items: center;
-    .flex (@direction: column, @align: center); // mixin reemplaza las 3 lineas de arriba
-    background: #f4f4f4;
-    margin-bottom: 5px;
-
+    .flex (@direction: column, @align: center); // mixin 1 reemplaza las 3 lineas de arriba
+    background-color: @nav-bg;
+    border-bottom: 2px solid @nav-border;
+    
     h2 {
-        padding-top: 15px;
+        margin: 2rem 0;
+        .hov-text()
     }
 
     ul {
         // display: flex;
-        // justify-content: space-around;
-        .flex (row, space-around, center);
+        // flex-direction: row;
+        .flex (row, space-around, center); // mixin 2 reemplaza las 2 lineas de arriba
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
         width: 35%;
-        padding: 15px;
-    }
 
-    a {
-        text-decoration: none;
-        color: @river-bend;
-        font-size: 1.6rem;
-        transition: background-color .5s;
-        padding: 5px;
-        border-radius: 5px;
-        white-space: nowrap;
-    }
+        li + li { // selecciono el li que está al lado del li
+            margin-left: 2rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: @river-bend;
+            font-size: 1.6rem;
+            transition: background-color .5s;
+            padding: 5px;
+            border-radius: 5px;
+            white-space: nowrap;
+            &:hover {
+                background-color: @river-bend;
+                color: #d4d5d8
+            }
+        }
 
-    a:hover {
-        background-color: @river-bend;
-        color: #d4d5d8
-
     }
-    
 }

@@ -160,26 +160,24 @@ p {
   width: 100%;
   margin: 0 auto;
 }
-nav {
+.pestañas nav {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: #f4f4f4;
-  margin-bottom: 5px;
+  background-color: #F6F6F6;
+  border-bottom: 2px solid #F1F1F1;
 }
-nav h2 {
-  padding-top: 15px;
+.pestañas nav h2 {
+  margin: 2rem 0;
 }
-nav ul {
+.pestañas nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 35%;
-  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
-nav a {
+.pestañas nav ul a {
   text-decoration: none;
   color: #454A59;
   font-size: 1.6rem;
@@ -188,7 +186,48 @@ nav a {
   border-radius: 5px;
   white-space: nowrap;
 }
-nav a:hover {
+.pestañas nav ul a:hover {
+  background-color: #454A59;
+  color: #d4d5d8;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-bottom: 2px solid #F1F1F1;
+}
+nav h2 {
+  margin: 2rem 0;
+}
+nav h2:hover {
+  color: #2B7FA5;
+  transition: color 0.3s;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  width: 35%;
+}
+nav ul li + li {
+  margin-left: 2rem;
+}
+nav ul a {
+  text-decoration: none;
+  color: #454A59;
+  font-size: 1.6rem;
+  transition: background-color 0.5s;
+  padding: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+nav ul a:hover {
   background-color: #454A59;
   color: #d4d5d8;
 }
@@ -203,9 +242,13 @@ footer {
   align-items: center;
 }
 .home .intro img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
+  margin: 1rem;
+  border-radius: 2rem;
+}
+@media (max-width: 500px) {
+  .home .intro img {
+    width: 100%;
+  }
 }
 .home .intro h2 {
   padding: 15px;
@@ -213,7 +256,6 @@ footer {
 .home .intro h2:hover {
   color: #2B7FA5;
   transition: color 0.3s;
-  text-shadow: 1px 1px 1px #8b8a8a;
 }
 .home .intro p {
   padding: 0 15px;
@@ -230,8 +272,19 @@ footer {
   height: 100%;
 }
 .home .music-images img:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
   transition: transform 0.7s;
+}
+@media (max-width: 500px) {
+  .home .music-images .tecnologia,
+  .home .music-images .ondas {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home .music-images .auricular {
+    width: 100%;
+  }
 }
 .home .musica-nueva {
   padding: 15px;
@@ -242,7 +295,6 @@ footer {
 .home .musica-nueva h3:hover {
   color: #2B7FA5;
   transition: color 0.3s;
-  text-shadow: 1px 1px 1px #8b8a8a;
 }
 .home .musica-nueva p {
   margin-top: 13px;
@@ -254,11 +306,30 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .actual {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+}
 .home .actual .actual-text {
   width: 50%;
 }
+@media (max-width: 500px) {
+  .home .actual .actual-text {
+    width: 100%;
+    padding-top: 4rem;
+  }
+}
 .home .actual .actual-text h3 {
   margin-bottom: 10px;
+}
+.home .actual .actual-text h3:hover {
+  color: #2B7FA5;
+  transition: color 0.3s;
 }
 .home .actual .actual-text p {
   margin-bottom: 26px;
@@ -281,9 +352,20 @@ footer {
   transform: scale(1.15);
   transition: transform 0.5s;
 }
+@media (max-width: 500px) {
+  .home .actual .actual-text .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 .home .actual .actual-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-img {
+    width: 100%;
+  }
 }
 .home .actual .actual-img img {
   width: 100%;
@@ -291,6 +373,6 @@ footer {
   border-radius: 10px;
 }
 .home .actual .actual-img img:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
   transition: transform 0.7s;
 }

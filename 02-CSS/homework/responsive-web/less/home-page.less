@@ -5,9 +5,11 @@
   .intro {
 
     img {
-      width: 100%;
-      height: auto;
-      .img-rounded(); // mixin reemplaza border-radius: @border;
+      margin: 1rem;
+      border-radius: 2rem;
+      @media (max-width: @phone) {
+        width: 100%;
+      }
     }
 
     h2 {
@@ -33,6 +35,20 @@
       height: 100%;
       .hov-img()
     }
+
+    .tecnologia, .ondas {
+      @media (max-width: @phone) {
+        display: none;
+      }
+    }
+
+    .auricular {
+      @media (max-width: @phone) {
+        width: 100%;
+      }
+    }
+
+
   }
 
   .musica-nueva {
@@ -40,7 +56,7 @@
 
     h3 {
       margin-top: 11px;
-      .hov-text();
+      .hov-text()
     }
 
     p {
@@ -55,12 +71,22 @@
     display: flex;
     justify-content: center;
 
+    @media (max-width: @phone) {
+      .flex(column-reverse);
+      padding: 15px;  
+    }
+
     .actual-text {
       width: 50%;
 
+      @media (max-width: @phone) {
+        width: 100%;
+        padding-top: 4rem;
+      }
+
       h3 {
         margin-bottom: 10px;
-        .hov-text();
+        .hov-text()
       }
 
       p {
@@ -68,13 +94,21 @@
       }
 
       .btn {
-        .btn-resgistrate(@river-bend, white)
+        .btn-resgistrate(@river-bend, white);
+        @media (max-width: @phone) {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
 
     .actual-img {
       width: 46%;
       margin-left: 4%;
+
+      @media (max-width: @phone) {
+        width: 100%;
+      }
 
       img {
         width: 100%;
