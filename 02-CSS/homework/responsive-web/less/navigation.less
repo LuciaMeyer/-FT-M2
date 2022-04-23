@@ -4,8 +4,10 @@ nav {
     // flex-direction: column;
     // align-items: center;
     .flex (@direction: column, @align: center); // mixin 1 reemplaza las 3 lineas de arriba
-    background-color: @nav-bg;
+    background-color: #F6F6F690;
     border-bottom: 2px solid @nav-border;
+    position: fixed;
+    width: 100%;
     
     h2 {
         margin: 2rem 0;
@@ -21,8 +23,8 @@ nav {
         margin-bottom: 1rem;
         width: 35%;
 
-        li + li { // selecciono el li que está al lado del li
-            margin-left: 2rem;
+        @media (max-width: @phone){
+            width: 80%;
         }
         
         a {
@@ -36,6 +38,9 @@ nav {
             &:hover {
                 background-color: @river-bend;
                 color: #d4d5d8
+            }
+            @media (max-width: @phone){
+                font-size: 1.3rem;
             }
         }
 
