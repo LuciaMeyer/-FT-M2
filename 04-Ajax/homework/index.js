@@ -1,31 +1,49 @@
 /* localhost:5000/amigos --> servidor de donde está sacando los datos, puedo pedirlo por id también localhost:5000/amigos/1 */
+let url = 'http://localhost:5000/amigos'
 
-
-$('#boton').click(function(){
-    $.get('http://localhost:5000/amigos', function(data){        
+function showFriends() {
+    $.get(url, data => {        
         data.forEach(e => {
-            let li = document.createElement('li');
-            let containerList = document.querySelector('#lista');
-            containerList.appendChild(li)
-            li.innerHTML = e.name;
-            // $('#lista').append(`<li>${e.name}</li>`); así lo hizo Martina
+            $('#lista').append(`<li>${e.id} > ${e.name} <button onclick="deleteFriends(${e.id})">x</button></li>`); 
         });
     })
     $('#lista').empty();
-})
+}
+$("#boton").click(showFriends);
 
 
+function serchFriends() {
+    let inp = $('#input').val();
+    if(inp > 0 && inp < 7) {
+        $.get(`${url}/${inp}`, data => {
+            $('#amigo').text(`Buscaste a ${data.name}`);
+            $('#input').val('')    
+        })
+    } else alert('Ingrese un ID de amigo válido')
+    $('#input').val('') 
+}
+$("#search").click(serchFriends);
 
 
-$('#search').click(function(){
-    
-    let inp = document.querySelector('#input').value;
-    $.get(`http://localhost:5000/amigos/${inp}`, function(data){       
-      
-        let sp = document.querySelector('#amigo')
-        sp.innerHTML = data.name;
-        // $('#amigo').text(`${data.name}`) así lo hizo Martina
-        
-       
-    })
-})
+function deleteFriends(idFriends) {
+    if(typeof idFriends !== 'number'){
+    idFriends = $("#inputDelete").val();
+    $("#inputDelete").val('');
+    }   
+    if(idFriends > 0 && idFriends < 7 ){
+        let amigo;
+        $.get(`${url}/${idFriends}`, f => {
+            amigo = f
+        })
+        $.ajax({
+            url: `${url}/${idFriends}`, 
+            type: "DELETE",
+            success: () => {
+                $('#sucess').text(`Borraste a ${amigo.name}`);
+                $('#inputDelete').val('')
+                showFriends()
+            }
+        })
+    } else alert('Ingrese un ID de amigo válido')
+}
+$("#delete").click(deleteFriends)
