@@ -1,3 +1,4 @@
+/*  para ver la aplicación en el Browser: http://localhost:3000 */  
 import React from 'react';
 import './App.css';
 import Card from './components/Card.jsx';

@@ -1,3 +1,5 @@
+/*este archivo index esta renderizando toda la App*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
