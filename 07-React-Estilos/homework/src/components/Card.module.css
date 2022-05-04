@@ -1,0 +1,36 @@
+.card {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 columnas de 1 fracción*/
+    grid-template-rows: 1fr 2fr; /* primer fila se una fracción y segunda del doble */
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.cityName{
+    grid-column: 1 / span 3;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.closeButton {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background-color: rgb(247, 199, 199);
+    color: rgb(23, 22, 22);
+    cursor: pointer;
+    border: 0.7px solid rgb(140, 87, 87);
+    padding: 0.2rem 0.3rem;
+    font-size: 0.7rem;
+    border-radius: 3px;
+}
+.closeButton:hover {
+  background-color: white;
+  border: .5px solid #454A59;
+  transform: scale(1.1);
+  transition: transform .5s;
+} 
