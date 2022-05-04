@@ -3,9 +3,26 @@ body {
   font-family: 'Prompt', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button{
+  font-family: 'Prompt', sans-serif;
+}
+
+input {
+  font-family: 'Prompt', sans-serif;
+}
+
+h1{
+  text-align:center
+}
+
+p {
+  text-align:center
 }

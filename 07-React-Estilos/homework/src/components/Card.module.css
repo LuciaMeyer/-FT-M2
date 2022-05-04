@@ -1,12 +1,14 @@
 .card {
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: rgb(112, 111, 111);
+    border-radius: 0.5rem;
+
     align-items: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*3 columnas de 1 fracción*/
     grid-template-rows: 1fr 2fr; /* primer fila se una fracción y segunda del doble */
-    border-radius: 0.5rem;
+
     position: relative;
 }
 
@@ -20,17 +22,30 @@
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
-    background-color: rgb(247, 199, 199);
-    color: rgb(23, 22, 22);
-    cursor: pointer;
-    border: 0.7px solid rgb(140, 87, 87);
-    padding: 0.2rem 0.3rem;
     font-size: 0.7rem;
-    border-radius: 3px;
+    color: rgb(23, 22, 22);
+    padding: 0.1rem 0.2rem;
+    
+    border-radius: 0.3rem;
+    border-color: transparent;
+    background-color: transparent;
 }
+
 .closeButton:hover {
-  background-color: white;
-  border: .5px solid #454A59;
-  transform: scale(1.1);
-  transition: transform .5s;
-} 
+  background-color: rgb(247, 212, 212);
+  border: 0.1rem solid #c8c8ca;
+  transition: transform .4s;
+}
+
+.tempName {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.tempValue {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+}
+

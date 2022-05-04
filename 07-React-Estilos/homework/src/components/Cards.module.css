@@ -1,0 +1,15 @@
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /*espacios entre filas y columnas*/
+    margin: 2rem 4rem 4rem 4rem;
+}
+
+@media (min-width:700px) {
+    .cards {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+}

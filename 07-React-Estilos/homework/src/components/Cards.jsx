@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import s from './Cards.module.css'
 
 /* porps es un objeto que contiene el arreglo cities de ciudades
 
@@ -11,7 +12,7 @@ export default function Cards(props) {
     return <h3>No hay ciudades disponibles</h3>
   }
   return (
-    <div>
+    <div className={s.cards}>
     {props.cities.map(c => 
       <Card
         key={c.id}

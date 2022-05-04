@@ -9,12 +9,12 @@ export default function Card(props) {
       <button className={s.closeButton} onClick={props.onClose}>❌</button>
       <span className={s.cityName}>{props.name}</span>
       <div>       
-        <label>Min</label>
-        <span>{props.min}</span>
+        <label className={s.tempName}>Min</label>
+        <span className={s.tempValue}>{props.min}</span>
       </div>
       <div>
-        <label>Max</label>
-        <span>{props.max}</span>
+        <label className={s.tempName}>Max</label>
+        <span className={s.tempValue}>{props.max}</span>
       </div>    
         <img src={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="clima" />   
     </div>

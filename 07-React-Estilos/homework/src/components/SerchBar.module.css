@@ -1,0 +1,48 @@
+
+.serchBar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.serchBar > input {
+    margin-right: 4rem;
+    margin-left: 4rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+}
+
+.serchBar > button {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-right: 4rem;
+    position: absolute;
+    top: 0.47rem;
+    right: 0.3rem;  
+    line-height: 1.5;
+    color: #72baf1;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border-color: #bdc0c2
+} 
+
+.serchBar > button:hover {
+    background-color: #72baf1;
+    border: 0.1rem solid #c8c8ca;
+    color: white
+  }
