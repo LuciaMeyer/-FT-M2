@@ -1,11 +1,17 @@
+// import Logo from '../logoHenry.png'
 import React from 'react';
-import Logo from '../logoHenry.png'
 import SearchBar from './SearchBar.jsx';
 import './Nav.css';
 
+
+// pasamano
 function Nav({onSearch}) {
   return (
-    <div>Nav</div>
+    <div className='nav'>
+    {/* <img src={Logo} alt='Henry' />
+    <h3>Henry Weather App</h3> */}
+    <SearchBar onSearch={onSearch}/>
+  </div>
   );
 };
 

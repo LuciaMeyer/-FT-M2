@@ -1,5 +1,9 @@
 .cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  height: 25vh;
+  height: 25vh;
+  margin: 1vh .8vw;
+  overflow: hidden;
+  border-radius: .6rem;
+  box-shadow: 0 0 2rem #4a321a;
 }
