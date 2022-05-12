@@ -18,7 +18,8 @@
       constructor(props) {
         super(props);
         this.state = {
-          contador: this.props.numero
+          contador: this.props.numero,
+          otro: 'lu'
         }
         // this.onButtonClick = this.onButtonClick.bind(this);
       }
@@ -31,10 +32,13 @@
       // }
 
       onButtonClick = () => {
-        console.log('this arrow', this)
+        // valor inicial {contador: 0}
         this.setState({
-          contador: this.state.contador + 1
+          contador: this.state.contador + 1, // muestra 1
+        }, function(){
+          console.log('Adentro: ', this.state.contador)
         })
+        console.log('Afuera: ', this.state.contador) // muestra 0
       }
 
       render() {

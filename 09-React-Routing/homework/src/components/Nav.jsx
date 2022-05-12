@@ -1,20 +1,23 @@
+// import Logo from '../logoHenry.png'
 import React from 'react';
-import Logo from '../img/logoHenry.png'
 import SearchBar from './SearchBar.jsx';
+import About from './About.jsx';
 import './Nav.css';
+import { Link } from 'react-router-dom';
 
 
+
+// pasamano
 function Nav({onSearch}) {
   return (
-    <nav className="navbar navbar-dark bg-dark">
-        <span className="navbar-brand">
-          <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-          Henry - Weather App
-        </span>
-        <SearchBar
-          onSearch={onSearch}
-        />
-    </nav>
+    <div className='nav'>
+    {/* <img src={Logo} alt='Henry' />
+    <h3>Henry Weather App</h3> */}
+    <Link to='/about'>
+      <span>About</span>
+    </Link>
+    <SearchBar onSearch={onSearch}/>
+  </div>
   );
 };
 
