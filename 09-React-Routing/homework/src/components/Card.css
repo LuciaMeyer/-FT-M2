@@ -1,33 +1,12 @@
-/* .card {
-  margin: 20px;
-  width: 18rem;
-}
 
-.card-title {
-  margin-bottom: 15px;
-}
-
-#closeIcon {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 8px;
-  margin-top: 8px;
-}
-
-.card-body {
-  margin-top: 0px !important;
-  padding-top: 0px !important;
-} */
-.card1 {
+.containCard {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  top: 0;
 
-
-  height: 23vh;
+  height: 30vh;
   width: 10rem;
   background: rgba(0, 0, 0, 0.55);
   border-radius: .5rem;
@@ -37,6 +16,7 @@
 
 
 .cityName{
+  display:contents;
   font-weight: 600;
   font-size: 1.2rem;
   font-weight: bolder;

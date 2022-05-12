@@ -51,12 +51,12 @@ export default function App() {
   return (
     <div className="App">
       <Link to='/'>
-        <div className='title'>
+        <div className='containTitle'>
           <img src={url} alt='logo Henry'></img>
           <h3 >Weather App</h3>
         </div>
       </Link>
-      <div className='contain'>
+      <div className='containNav'>
       <Nav onSearch={onSearch}/>
       <Cards cities={cities} onClose={onClose}/>
       </div>

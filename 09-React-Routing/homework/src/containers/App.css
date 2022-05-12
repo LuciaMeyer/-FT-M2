@@ -1,66 +1,62 @@
-/* .App {
 
-  text-align: center;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-} */
-
-.App,
-.contain{
-    position: absolute;
-    top: 0;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.App {
-  background: url('../assets/fondo_des.jpg') no-repeat center center fixed;
+.App { /* fondo */
+  position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-}
-.contain {
-  background: url('../assets/fondo.jpg') no-repeat center center fixed;
-  width: 75vw;
-  height: 70vh; 
-  margin: 24vh 15vw;
-  overflow: hidden;
-  border-radius: 1rem;
-  box-shadow: 0 0 2rem #4a321a;
 
- display: grid;
- grid-template-columns: 1fr;
- grid-template-rows: 3fr 1fr;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url('../assets/fondo_des.jpg') no-repeat center center fixed;
+  
 }
-.title{
-  position: absolute;
-  top: 0;
+
+.containTitle{ 
+  text-align: center;
   width: 75vw;
   height: 15vh; 
   margin: 5vh 15vw;
-  padding-top: .5rem;
-  overflow: hidden;
+
   border-radius: 1rem;
   box-shadow: 0 0 2rem #4a321a;
 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
 }
-.title > h3{
-  margin: 0;
+
+.containTitle > img {
+  display: block;
+  margin: 0 auto;
+  width: 9rem;
+}
+
+.containTitle > h3 {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: .1rem;
+}
+
+.containNav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr;
+
   position: absolute;
-  padding: 5rem 5rem 5rem 4.5rem ;
-        
+  top: 0;
+  width: 75vw;
+  height: 70vh; 
+  margin: 24vh 15vw;
+  
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url('../assets/fondo.jpg') no-repeat center center fixed;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem #4a321a;
 }
-.title > img {
-  width: 12rem;
-}
+
