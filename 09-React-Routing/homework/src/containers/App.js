@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
-import { Link } from 'react-router-dom';
-import {Route} from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
+import About from '../components/About';
+import Ciudad from '../components/Ciudad';
 
 let url = 'https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png' // logo Henry
 const apiKey = '4ae2636d8dfbdc3044bede63951a019b'
@@ -47,19 +48,44 @@ export default function App() {
     setCities(prevState => prevState.filter(c => c.id !== id));
   }
 
+  // recibe un id y agarra el arreglo ciudades y con el find busca id que coincida
+  // usa el parseInt por si el match lo tiene como string
+  // si no lo encuentra el find retorna undefined
+  function onFilter(id) {
+    let ciudad = cities.find (c => c.id === parseInt(id));
+    return ciudad;
+  }
+
 
   return (
     <div className="App">
+
       <Link to='/'>
         <div className='title'>
           <img src={url} alt='logo Henry'></img>
           <h3 >Weather App</h3>
         </div>
       </Link>
-      <div className='contain'>
-      <Nav onSearch={onSearch}/>
-      <Cards cities={cities} onClose={onClose}/>
-      </div>
+
+      <Switch>
+        <Route exact path={'/'}>
+          <div className='contain'>
+            <Nav onSearch={onSearch}/>
+            <Cards cities={cities} onClose={onClose}/>
+          </div>
+        </Route>
+
+        <Route path={'/About'}>
+          <About />
+        </Route>
+
+        <Route
+          path={'/ciudad/:idCity'}
+          render={({match}) => {<Ciudad city= {onFilter(match.params.id)}/>}}
+        > 
+        </Route>
+      </Switch>
+
     </div>
   );
 }

@@ -1,11 +1,8 @@
 .serchBar {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 100%;
+  position: relative;
+  display: flex;
+  width: 50%;
 }
-/*49rem 50rem 1rem;*/
 
 .inText {
     margin-top: 1rem; 
@@ -33,6 +30,7 @@
     color: #4a321aa1;
     font-family: 'Prompt';
     letter-spacing: .1rem;
+    font-size: .8rem;
 }
 
 

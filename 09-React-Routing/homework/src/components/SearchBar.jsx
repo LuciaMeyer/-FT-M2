@@ -20,10 +20,10 @@ export default function SearchBar({onSearch}) {
         // que cambia el estado, lo q se escribe se guarda en city
         // cuando se aprieta este botón de abajo el estado de city se lo paso a la función onSearch y dsp lo limpio
         />
-      <input className='inSub' type="submit" value="🔍︎" />
-      <h3 className="textPubl">TEMPERATURA actualizada de <br/> todas las ciudades DEL MUNDO</h3>
+      <input className='inSub' type="submit" value="✚" />
+      {/* <h3 className="textPubl">TEMPERATURA actualizada de <br/> todas las ciudades DEL MUNDO</h3> */}
     </form>
   );
 }
 
-//✚
+//🔍︎

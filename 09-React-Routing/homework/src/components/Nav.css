@@ -1,3 +1,15 @@
-/* #logoHenry {
-  margin-right: 20px;
-} */
+
+.nav {
+  display: block;
+}
+
+.textPubl  {
+  margin-top: 2rem;
+  margin-right: 20rem;
+  padding: 3rem 0 0 1rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #392715;
+  letter-spacing: .1rem;
+}
+

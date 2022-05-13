@@ -1,48 +1,15 @@
-/* .card {
-  margin: 20px;
-  width: 18rem;
-}
-
-.card-title {
-  margin-bottom: 15px;
-}
-
-#closeIcon {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 8px;
-  margin-top: 8px;
-}
-
-.card-body {
-  margin-top: 0px !important;
-  padding-top: 0px !important;
-} */
 .card1 {
   position: relative;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  top: 0;
-
-
-  height: 23vh;
   width: 10rem;
+
   background: rgba(0, 0, 0, 0.55);
   border-radius: .5rem;
   margin: .5rem;
   padding: .5rem;
-}
-
-
-.cityName{
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-weight: bolder;
-  color: #ffffff;
-  margin-top: 1rem;
-  letter-spacing: 0.04rem;
 }
 
 .closeButton {
@@ -63,6 +30,15 @@ background-color: #ffffff4b;
 transition: transform .4s;
 }
 
+.cityName{
+  font-weight: 600;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: #ffffff;
+  /* margin-top: 1rem; */
+  letter-spacing: 0.04rem;
+}
+
 .temp {
   display: flex;
 }
@@ -73,10 +49,11 @@ transition: transform .4s;
   align-items: center;
   color: #ffffff;
   font-size: 1rem;
-  height: 10vh;
+  /* height: 10vh; */
   letter-spacing: .2rem;
-  font-weight: bolder;
+  /* font-weight: bolder; */
 }
+
 .textTemp + .textTemp{
   margin-left: 1.5rem;
 }
