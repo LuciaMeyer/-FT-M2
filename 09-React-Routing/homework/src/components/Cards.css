@@ -1,6 +1,7 @@
 .cards {
   display: flex;
-  height: 32vh;
+  height: 25vh;
+  height: 25vh;
   margin: 1vh .8vw;
   overflow: hidden;
   border-radius: .6rem;

@@ -11,11 +11,12 @@ import { Link } from 'react-router-dom';
 function Nav({onSearch}) {
   return (
     <div className='nav'>
-      <SearchBar onSearch={onSearch}/>
-      <Link className='about' to='/about'>
-        <span>About</span>
-      </Link>
-      <h3 className="textPubl">TEMPERATURA actualizada de <br/> todas las ciudades DEL MUNDO</h3>
+    {/* <img src={Logo} alt='Henry' />
+    <h3>Henry Weather App</h3> */}
+    <Link to='/about'>
+      <span>About</span>
+    </Link>
+    <SearchBar onSearch={onSearch}/>
   </div>
   );
 };
