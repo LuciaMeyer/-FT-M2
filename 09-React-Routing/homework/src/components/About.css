@@ -1,0 +1,21 @@
+.about {
+
+
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    padding: .1rem 1rem;
+  
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Prompt';
+    font-weight: 600;
+    letter-spacing: .05rem;
+    color: #4a321a;
+  
+    background-color: #fdfd2a;
+    border: transparent;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem #4a321a;
+      
+  }

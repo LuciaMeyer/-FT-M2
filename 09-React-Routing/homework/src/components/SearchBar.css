@@ -1,7 +1,7 @@
 .serchBar {
   position: relative;
   display: flex;
-  align-items: stretch;
+  /* align-items: stretch; */
   width: 50%;
 }
   

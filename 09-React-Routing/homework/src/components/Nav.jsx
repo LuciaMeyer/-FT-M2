@@ -12,11 +12,11 @@ function Nav({onSearch}) {
   return (
     <div className='nav'>
       <SearchBar onSearch={onSearch}/>
-      <Link className='about' to='/about'>
-        <span>About</span>
+      <Link to='/about'>
+        <span className='about' >About</span>
       </Link>
-      <h3 className="textPubl">TEMPERATURA actualizada de <br/> todas las ciudades DEL MUNDO</h3>
-  </div>
+      {/* <h3 className="textPubl">TEMPERATURA actualizada de  todas las ciudades DEL MUNDO</h3> */}
+    </div>
   );
 };
 
