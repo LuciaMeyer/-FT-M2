@@ -1,15 +1,30 @@
-
 .nav {
   display: block;
 }
 
 .textPubl  {
-  margin-top: 2rem;
-  margin-right: 20rem;
-  padding: 3rem 0 0 1rem;
-  font-size: 1.7rem;
+  padding: 20vh 0vh 0vh 2vh;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #392715;
   letter-spacing: .1rem;
+}
+
+.about {
+  position: relative;
+  top: 1rem;
+  left: 1rem;
+  padding: .05rem .5rem;
+
+  text-align: center;
+  font-size: .9rem;
+  font-family: 'Prompt';
+  letter-spacing: .05rem;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.55);
+  border: transparent;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem #4a321a;   
 }
 

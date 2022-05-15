@@ -1,20 +1,15 @@
-.about {
+/* containOneCard definido en Ciudad.css */
 
+.titleAbout {
+  position: relative;
+  top: 2rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .2rem;    
+}
 
-    position: relative;
-    top: 1rem;
-    left: 1rem;
-    padding: .05rem .5rem;
-  
-    text-align: center;
-    font-size: .9rem;
-    font-family: 'Prompt';
-    /* font-weight: 600; */
-    letter-spacing: .05rem;
-    color: white;
-  
-    background-color: rgba(0, 0, 0, 0.55);
-    border: transparent;
-    border-radius: 0.25rem;
-    box-shadow: 0 0 0.5rem #4a321a;   
-  }
+.infoAbout {
+  position: relative;
+  top: 5rem;
+  text-align: center;
+}
