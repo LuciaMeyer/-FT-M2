@@ -1,4 +1,4 @@
-const { INCREMENTO, DECREMENTO } = require('../action-types');
+const { INCREMENTO, DECREMENTO, SUMARIMPAR } = require('../action-types');
 
 // Nuestras actions (action creators) devolverán un paquete de actions que nuestro reducer recibirá. 
 // ¿Cómo es el paquete de acción? Tengan en cuenta que el creador de la acción no es en absoluto responsable 
@@ -17,7 +17,15 @@ const decremento = () => {
   }
 };
 
+const sumarimpar = () => {
+  return {
+    type: SUMARIMPAR
+  }
+};
+
+
 module.exports = {
   incremento,
-  decremento
+  decremento,
+  sumarimpar
 }
