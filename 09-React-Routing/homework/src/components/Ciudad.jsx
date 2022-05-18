@@ -7,10 +7,10 @@ const apiKey = '4ae2636d8dfbdc3044bede63951a019b'
 export default function Ciudad ({ match }){
     // recibo match y me guardo el id
     const id = match.params.id;
-    // creo un estado inicial como undefined)
+    // creo un estado inicial como undefined
     const [city, setCity] = useState(undefined);
     
-    // uso useEffect para que trabajar con busqueda al momento que se carga el componente
+    // uso useEffect para trabajar con busqueda al momento que se carga el componente
     useEffect(() => {
         // hago el llamado a la Api por ciudad, que va a ser 1
         fetch(`http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${apiKey}&units=metric`)
@@ -30,7 +30,7 @@ export default function Ciudad ({ match }){
               latitud: recurso.coord.lat,
               longitud: recurso.coord.lon
             };
-            // si la encuentra seteo al estad al ciudad
+            // si la encuentra seteo al estado con la ciudad
             setCity(ciudad);
           } else {
             // si no la encuentra seteo el estado a null  
@@ -38,6 +38,7 @@ export default function Ciudad ({ match }){
           }
         })
     }, [id]); // voy a escuchar cambios en el id
+    console.log(city)
 
     // pregunto si el estado es undefined y le doy tiempo a que cargue
     // pregunto si el estado es null para que no rompa

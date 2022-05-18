@@ -52,17 +52,17 @@ export default function App() {
   // recibe un id y con el find busca en el arreglo ciudades el id que coincida
   // usa el parseInt por si el match lo tiene como string
   // si no lo encuentra el find retorna undefined
-  function onFilter(ciudadId) {
-    let ciudad = cities.find (c => c.id === parseInt(ciudadId));
-    return ciudad;
-  }
+  // function onFilter(ciudadId) {
+  //   let ciudad = cities.find (c => c.id === parseInt(ciudadId));
+  //   return ciudad;
+  // }
 
 
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path={'/'}>
+        <Route exact path='/'>
           <div className='contain'>
             <Nav onSearch={onSearch}/>
             <Cards cities={cities} onClose={onClose}/>
