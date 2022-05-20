@@ -12,9 +12,11 @@ export class Buscador extends Component {
       title: ""
     };
   }
+
   handleChange(event) {
     this.setState({ title: event.target.value });
   }
+
   handleSubmit(event) {
     event.preventDefault();
   }
@@ -45,4 +47,21 @@ export class Buscador extends Component {
   }
 }
 
-export default Buscador;
+function mapStateToProps(state) {
+  return {
+    movies: state.moviesLoaded
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addMovieFav: movie => dispatch(addMovieFav(movie)),
+    getMovies: title => dispatch(getMovies(title))
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Buscador);
+
