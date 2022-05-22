@@ -1,9 +1,10 @@
-import {GET_MOVIES, GET_MOVIE_DETAIL, ADD_MOVIE_FAV, REMOVE_MOVIE_FAV} from '../actions/index';
+import {GET_MOVIES, GET_MOVIE_DETAIL, ADD_MOVIE_FAV, REMOVE_MOVIE_FAV, GET_POST} from '../actions/index';
 
 const initialState = {
     moviesFav: [],
     moviesLoaded: [],
-    movieDetail: {}
+    movieDetail: {},
+    loading: false,
   };
 
   function rootReducer (state = initialState, action) {
@@ -37,6 +38,12 @@ const initialState = {
             ...state,
             moviesFav: state.moviesFav.filter(m => m.id !== action.payload) // devuelvo un arreglo con las pelis q sean diferentes a la del id a eliminar
         }
+    }
+    if(action.type === GET_POST){
+        return {
+            ...state,
+            loading: true,
+          }
     }
     return state;
 }

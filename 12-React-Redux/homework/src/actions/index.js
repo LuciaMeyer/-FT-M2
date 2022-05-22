@@ -2,6 +2,7 @@ export const GET_MOVIES = 'GET_MOVIES';
 export const GET_MOVIE_DETAIL = 'GET_MOVIE_DETAIL';
 export const ADD_MOVIE_FAV = 'ADD_MOVIE_FAV';
 export const REMOVE_MOVIE_FAV = 'REMOVE_MOVIE_FAV';
+export const GET_POST = 'GET_POST';
 
 
 // con request a la API trae todas las peliculas según título ingresado
@@ -21,6 +22,7 @@ export function getMovies (titulo) {
 // payload es el objeto con los detalles de la pelicula que seleccionamos
 export function getMovieDetail (idMovie) {
     return function (dispatch) {
+        dispatch(getPost());
         fetch(`http://www.omdbapi.com/?apikey=fc7facd5&i=${idMovie}`)
         .then(response => response.json())
         .then(json => {
@@ -46,3 +48,9 @@ export function removeMovieFavorite (payload) {
         payload
     }
 }
+
+export function getPost() {
+    return {
+      type: GET_POST,
+    }
+  }
