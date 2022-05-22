@@ -1,4 +1,4 @@
-import {GET_MOVIES, GET_MOVIE_DETAIL, ADD_MOVIE_FAV, REMOVE_MOVIE_FAV} from '../actions.index.js';
+import {GET_MOVIES, GET_MOVIE_DETAIL, ADD_MOVIE_FAV, REMOVE_MOVIE_FAV} from '../actions/index';
 
 const initialState = {
     moviesFav: [],
@@ -6,7 +6,7 @@ const initialState = {
     movieDetail: {}
   };
 
-export default (state = initialState, action) => {
+  function rootReducer (state = initialState, action) {
     // {type: GET_MOVIES, payload: json} --> {} payload es objeto json de la búsqueda por título
     if (action.type === GET_MOVIES) {
         return {
@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
         };
     }
 
-    // {type: GET_MOVIE_DETAIL, payload: json} --> {} payload es objeto por id con los detalles
+    // {type: GET_MOVIE_DETAIL, payload: json} --> {} payload es un objeto con los detalles
     if (action.type === GET_MOVIE_DETAIL) {
         return {
             ...state,
@@ -23,7 +23,7 @@ export default (state = initialState, action) => {
         };
     }
 
-    // { type: ADD_MOVIE_FAV, payload } --> {} payload es objeto de peli
+    // { type: ADD_MOVIE_FAV, payload } --> {} payload un es objeto de peli
     if (action.type === ADD_MOVIE_FAV) {
         return {
             ...state, 
@@ -31,11 +31,14 @@ export default (state = initialState, action) => {
         };
     }
 
-    // {type: REMOVE_MOVIE_FAV, payload: idMovie} --> payload es id de la peli a eliminar    
+    // {type: REMOVE_MOVIE_FAV, payload} --> payload es id de la peli a eliminar (q es un objeto)
     if (action.type === REMOVE_MOVIE_FAV) {
         return {
             ...state,
-            moviesFav: state.moviesFav.filter(m => m.imdbID !== action.payload) // devuelvo un arreglo con las pelis q sean diferentes a la del id (a eliminar)
+            moviesFav: state.moviesFav.filter(m => m.id !== action.payload) // devuelvo un arreglo con las pelis q sean diferentes a la del id a eliminar
         }
-    } 
+    }
+    return state;
 }
+
+export default rootReducer;

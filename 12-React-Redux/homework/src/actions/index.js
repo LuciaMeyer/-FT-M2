@@ -4,8 +4,8 @@ export const ADD_MOVIE_FAV = 'ADD_MOVIE_FAV';
 export const REMOVE_MOVIE_FAV = 'REMOVE_MOVIE_FAV';
 
 
-// traer con request a la API, todas las peliculas según título ingresado
-// payload será el objeto que recibamos de nuestra request
+// con request a la API trae todas las peliculas según título ingresado
+// payload es json {} 
 export function getMovies (titulo) {
     return function (dispatch) {
         fetch(`http://www.omdbapi.com/?apikey=fc7facd5&s=${titulo}`)
@@ -13,6 +13,7 @@ export function getMovies (titulo) {
         .then(json => {
           dispatch( {type: GET_MOVIES, payload: json} );
         });
+        
     }
 }
 
@@ -23,17 +24,14 @@ export function getMovieDetail (idMovie) {
         fetch(`http://www.omdbapi.com/?apikey=fc7facd5&i=${idMovie}`)
         .then(response => response.json())
         .then(json => {
-            dispatch({
-                type: GET_MOVIE_DETAIL,
-                payload: json
-            })
+            dispatch( {type: GET_MOVIE_DETAIL, payload: json} )
         })
     }
 }
 
 // agregar peli a favoritos
 // payload que pasamos es nombre de la peli favorita
-export function addMovieFav (payload) {
+export function addMovieFavorite (payload) {
     return {
         type: ADD_MOVIE_FAV,
         payload 
@@ -42,7 +40,7 @@ export function addMovieFav (payload) {
 
 // eliminar peli de favoritos
 // payload es la pelicula a eliminar (por id)
-export function removeMovieFav (payload) {
+export function removeMovieFavorite (payload) {
     return {
         type: REMOVE_MOVIE_FAV,
         payload
