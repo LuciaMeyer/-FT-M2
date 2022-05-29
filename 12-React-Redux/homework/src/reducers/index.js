@@ -16,6 +16,14 @@ const initialState = {
         };
     }
 
+    // { type: ADD_MOVIE_FAV, payload } --> {} payload un es objeto de peli
+    if (action.type === ADD_MOVIE_FAV) {
+        return {
+            ...state, 
+            moviesFav: state.moviesFav.concat(action.payload) // a lo q tenía dentro del [{}, {}] le agrego nuevo objeto {} 
+        };
+    }
+    
     // {type: GET_MOVIE_DETAIL, payload: json} --> {} payload es un objeto con los detalles
     if (action.type === GET_MOVIE_DETAIL) {
         return {
@@ -24,13 +32,6 @@ const initialState = {
         };
     }
 
-    // { type: ADD_MOVIE_FAV, payload } --> {} payload un es objeto de peli
-    if (action.type === ADD_MOVIE_FAV) {
-        return {
-            ...state, 
-            moviesFav: state.moviesFav.concat(action.payload) // a lo q tenía dentro del [{}, {}] le agrego nuevo objeto {} 
-        };
-    }
 
     // {type: REMOVE_MOVIE_FAV, payload} --> payload es id de la peli a eliminar (q es un objeto)
     if (action.type === REMOVE_MOVIE_FAV) {
