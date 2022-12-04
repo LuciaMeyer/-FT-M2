@@ -1,24 +1,4 @@
-
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-<table class="hide" width="100%" style='table-layout:fixed;'>
-  <tr>
-   <td>
-    <a href="https://airtable.com/shrHsDa2eamWqLAre?prefill_clase=12-React-Redux">
-   <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
-   <br>
-   Hacé click acá para dejar tu feedback sobre esta clase.
-    </a>
-   </td>
-              <td>
-      <a href="https://quiz.soyhenry.com/evaluation/new/60746d39656c8d23c2e61101">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
-        <br>
-        Hacé click acá completar el quiz teórico de esta lecture.
-      </a>
-   </td>
-  </tr>
-</table>
+[⬅️ volver](https://github.com/LuciaMeyer/Henry_M2_Frontend)
 
 # React Redux
 
@@ -461,7 +441,7 @@ export function removeComment(postId, index) {
 
 ### Dispatch
 
-Las _acciones_ tienen que ser enviadas al _Store_ para que surgan efecto. La función [`dispatch`](http://redux.js.org/docs/api/Store.html#dispatch) base es un método de `store`, esta manda una acción de forma sincrónica a los reductores del store, junto con el estado previo retornado por el store, para calcular el nuevo estado. Espera que las acciones que les pasemos sean objetos planos, listas para ser consumidas por los reducers.
+Las _acciones_ tienen que ser enviadas al _Store_ para que surtan efecto. La función [`dispatch`](http://redux.js.org/docs/api/Store.html#dispatch) base es un método de `store`, esta manda una acción de forma sincrónica a los reductores del store, junto con el estado previo retornado por el store, para calcular el nuevo estado. Espera que las acciones que les pasemos sean objetos planos, listas para ser consumidas por los reducers.
 
 También se puede envolver a los dispatchers en una serie de [Middlewares](http://redux.js.org/docs/Glossary.html#middleware), esto permite que los dispatchers puedan manejar _acciones asincrónicas_, además de poder transformar, demorar, ignorar o interpretar acciones antes de pasarla al siguiente Middleware.
 
@@ -628,3 +608,5 @@ Ahora vamos a poder acceder a nuestro `store` en cada Componente a través de su
 ## Homework
 
 Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M2/blob/master/12-React-Redux/homework/README.md)
+
+[⬆️ subir](#React-Redux)

@@ -1,14 +1,12 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
+Para ejecutar los test dentro de cada carpeta ```homework``` hacer:
 
----
+```
+npm install
+npm test
+```
 
-### Podes ver el contenido de todo el repositorio en formato web tipeando `npm install` y `npm start` e ingresando luego a <http://localhost:8080>
-
----
-
-# Módulo 2
-
-#### Front-End
+## Bootcamp Henry Módulo 2 - Front-End
+11/4/22 - 28/5/22
 
 <div class="hide">
 
@@ -29,19 +27,5 @@
 - Redux:
     1. [Intro](./11-Redux)
     2. [React-Redux](./12-React-Redux)
-
-</div>
-
-## Proceso de subida de homeworks
-
-__IMPORTANTE:__ Luego de completar cada una de las homeworks del día deberán ejecutar los siguientes comandos para subir sus trabajos a sus repositorios (Deben estar posicionados sobre la carpeta del repositorio):
-
-```bash
-  git add . 
-  git commit -m "el mensaje que ustedes quieran"
-  git push
-```
-
-Extra:
-
-- [React Hooks](./13-React-Hooks)
+- Extra:
+    1. [React Hooks](./13-React-Hooks)

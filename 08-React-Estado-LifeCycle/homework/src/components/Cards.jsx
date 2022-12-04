@@ -3,6 +3,7 @@ import Card from './Card.jsx';
 import './Cards.css';
 
 export default function Cards({cities, onClose}) {
+  
   if(cities){
     return (
       <div className='cards'>

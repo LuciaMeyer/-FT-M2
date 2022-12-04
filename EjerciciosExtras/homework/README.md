@@ -1,3 +1,5 @@
+[⬅️ volver](https://github.com/LuciaMeyer/Henry_M2_Frontend)
+
 # Redux BLOG APP
 
 En este ejercicio vamos a crear una APP que utilice la API de [JSONPlaceholder](https://jsonplaceholder.typicode.com/). Vamos a crear nuestra app utilizando __REACT__ y __REDUX__.
@@ -255,3 +257,5 @@ Para ver todos los post, eliminamos los filtros, al presionar el botón VER TODO
 Para mejorar la experiencia del usuario, cuando se presione el link para ver el listado de posts de un usuario, mostrar un texto o imagen que indique que se está "Cargando" la información, hasta que llegue el response del servidor y recién ahí, mostrar su detalle.
 
 Con esto tendriamos una App integrado con React Redux!
+
+[⬆️ subir](#Redux-BLOG-APP)

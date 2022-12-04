@@ -1,25 +1,7 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-<table class="hide" width="100%" style='table-layout:fixed;'>
-  <tr>
-   <td>
-    <a href="https://airtable.com/shrHsDa2eamWqLAre?prefill_clase=05-Bundlers">
-   <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
-   <br>
-   Hacé click acá para dejar tu feedback sobre esta clase.
-    </a>
-   </td>
-              <td>
-      <a href="https://quiz.soyhenry.com/evaluation/new/607f6d7d56b4056ff0328db0">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png" width="100" height="100"/>
-        <br>
-        Hacé click acá completar el quiz teórico de esta lecture.
-      </a>
-   </td>
-  </tr>
-</table>
+[⬅️ volver](https://github.com/LuciaMeyer/Henry_M2_Frontend)
 
 # Módulos y Bundlers
+
 
 Cuando desarrollamos, queremos que la estructura de nuestro programa/codigo sea lo mas transparente posible, facil de explicar y que cada parte cumpla una tarea definida.
 
@@ -211,3 +193,5 @@ Una vez hecho esto, podés empaquetar o convertir todo tu grafo de dependencias 
 ## Homework
 
 Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M2/blob/master/05-Bundlers/homework/README.md)
+
+[⬆️ subir](#módulos-y-bundlers)

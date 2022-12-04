@@ -50,3 +50,13 @@ const initialState = {
 }
 
 export default rootReducer;
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    for (const key in object) {
+        if (Object.hasOwnProperty.call(object, key)) {
+            const element = object[key];
+            
+        }
+    }
+}
